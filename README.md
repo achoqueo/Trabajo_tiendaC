@@ -7,8 +7,8 @@ El sistema gestiona de forma interna las ventas, clientes, catalogo e inventario
 - **HU-005 (RF-05):** Registrar Cliente (Implementado con Clean Code y pruebas unitarias).
 
 ## Requisitos del Sistema
-- **Backend:** PHP >= 8.1 / Framework CodeIgniter 4
-- **Frontend:** Vue.js 3
+- **Backend:** Laravel
+- **Frontend:** Vue.js 
 - **Base de Datos:** MySQL 8.0
 
 ## Pasos de Instalacion y Ejecucion
