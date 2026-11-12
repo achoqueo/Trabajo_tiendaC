@@ -48,3 +48,35 @@ class ClienteServiceTest extends TestCase
         $this->clienteService->registrarCliente($datosCliente, $clientesExistentes);
     }
 }
+
+public function rechaza_registro_con_dni_longitud_invalida()
+{
+    $this->expectException(Exception::class);
+    $this->expectExceptionMessage("FORMATO_DNI_INVALIDO");
+
+    $datosCliente = [
+        'tipoDocumento'   => 'DNI',
+        'numeroDocumento' => '12345', // Menos de 8 dígitos
+        'nombres'         => 'Ana',
+        'apellidos'       => 'Torres',
+        'email'           => 'ana.torres@example.com'
+    ];
+
+    $this->clienteService->registrarCliente($datosCliente, []);
+}
+
+public function rechaza_registro_con_email_invalido()
+{
+    $this->expectException(Exception::class);
+    $this->expectExceptionMessage("FORMATO_EMAIL_INVALIDO");
+
+    $datosCliente = [
+        'tipoDocumento'   => 'DNI',
+        'numeroDocumento' => '70654321',
+        'nombres'         => 'Ana',
+        'apellidos'       => 'Torres',
+        'email'           => 'ana.torres.com' // Sin @
+    ];
+
+    $this->clienteService->registrarCliente($datosCliente, []);
+}
