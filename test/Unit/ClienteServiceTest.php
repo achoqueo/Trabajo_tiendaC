@@ -48,7 +48,7 @@ class ClienteServiceTest extends TestCase
         $this->clienteService->registrarCliente($datosCliente, $clientesExistentes);
     }
 
-public function rechaza_registro_con_dni_longitud_invalida()
+public function testRechazaRegistroConDniLongitudInvalida()
 {
     $this->expectException(Exception::class);
     $this->expectExceptionMessage("FORMATO_DNI_INVALIDO");
@@ -64,7 +64,7 @@ public function rechaza_registro_con_dni_longitud_invalida()
     $this->clienteService->registrarCliente($datosCliente, []);
 }
 
-public function rechaza_registro_con_email_invalido()
+public function testRechazaRegistroConEmailInvalido()
 {
     $this->expectException(Exception::class);
     $this->expectExceptionMessage("FORMATO_EMAIL_INVALIDO");
