@@ -47,7 +47,6 @@ class ClienteServiceTest extends TestCase
 
         $this->clienteService->registrarCliente($datosCliente, $clientesExistentes);
     }
-}
 
 public function rechaza_registro_con_dni_longitud_invalida()
 {
@@ -79,4 +78,5 @@ public function rechaza_registro_con_email_invalido()
     ];
 
     $this->clienteService->registrarCliente($datosCliente, []);
+}
 }
