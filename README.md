@@ -7,12 +7,12 @@ El sistema gestiona de forma interna las ventas, clientes, catalogo e inventario
 - **HU-005 (RF-05):** Registrar Cliente (Implementado con Clean Code y pruebas unitarias).
 
 ## Requisitos del Sistema
-- **Backend:** Laravel
+- **Backend:** PHP >= 8.1 / Framework CodeIgniter 4
 - **Frontend:** Vue.js 
 - **Base de Datos:** MySQL 8.0
 
 ## Pasos de Instalacion y Ejecucion
 1. Clonar el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO_GITLAB>
+   git clone https://github.com/achoqueo/Trabajo_tiendaC.git
    cd Trabajo_tiendaC
